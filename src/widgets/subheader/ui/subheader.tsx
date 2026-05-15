@@ -7,7 +7,7 @@ import { Plus } from "lucide-react";
 
 export function Subheader() {
   return (
-    <div className="grid w-full grid-cols-[1fr_2fr_100px] items-center gap-25 px-10 py-5">
+    <div className="grid w-full grid-cols-[1fr_2fr_100px] items-center gap-25 px-10 py-6">
       <h1 className="text-2xl font-bold">Kanban Board</h1>
 
       {/* Instruments */}
