@@ -32,7 +32,7 @@ export function BoardItem({
   tasks: Task[];
 }) {
   return (
-    <Card className="bg-gray-100 h-min dark:bg-gray-800">
+    <Card className="bg-gray-100 h-min dark:bg-gray-800 sm:grow sm:basis-0">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
           <svg width="14" height="14" viewBox="0 0 14 14">

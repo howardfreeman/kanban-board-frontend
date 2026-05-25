@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export function Logo() {
   return (
-    <Link href="/" className="flex items-center space-x-2">
-      <div className="w-8 h-8">
+    <Link href="/" className="flex items-center gap-2">
+      <div className="w-5 h-5">
         <svg
           width="128"
           height="128"
@@ -36,7 +36,7 @@ export function Logo() {
           />
         </svg>
       </div>
-      <div className="text-xl font-bold">KanbanBoard</div>
+      <div className="text-sm sm:text-xl font-bold">KanbanBoard</div>
     </Link>
   );
 }

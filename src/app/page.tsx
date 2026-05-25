@@ -7,7 +7,7 @@ export default function Home() {
     <>
       <Header />
       <Subheader />
-      <main>
+      <main className="mb-5">
         <Board />
       </main>
     </>

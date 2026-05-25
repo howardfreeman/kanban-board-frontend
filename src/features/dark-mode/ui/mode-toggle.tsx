@@ -2,7 +2,6 @@
 
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
-
 import { Button } from "@/shared/ui/button";
 import {
   DropdownMenu,
@@ -10,11 +9,13 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/shared/ui/dropdown-menu";
+import { useWindowSize } from "@/shared/hooks/use-window-size";
 
 export function ModeToggle() {
   const { setTheme } = useTheme();
+  const userWidth = useWindowSize().width;
 
-  return (
+  return userWidth && userWidth >= 640 ? (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="outline" size="icon">
@@ -35,5 +36,7 @@ export function ModeToggle() {
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
+  ) : (
+    <></>
   );
 }

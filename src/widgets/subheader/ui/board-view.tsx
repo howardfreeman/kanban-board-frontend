@@ -14,7 +14,7 @@ export function BoardView() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline">
+        <Button className="hidden sm:flex" variant="outline">
           <Grid2X2 />
           Board View
           <ChevronDown />

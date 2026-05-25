@@ -1,6 +1,7 @@
 "use client";
 
 import { Avatar, AvatarImage, AvatarFallback } from "@/shared/ui/avatar";
+import { Button } from "@/shared/ui/button";
 import {
   DropdownMenu,
   DropdownMenuTrigger,
@@ -14,7 +15,10 @@ export function AvatarDropdown() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <button className="flex items-center gap-3 focus:outline-none ">
+        <Button
+          className="flex items-center gap-3 px-0 hover:bg-transparent focus:bg-transparent"
+          variant="ghost"
+        >
           <Avatar>
             <AvatarImage src="https://github.com/shadcn.png" alt="shadcn" />
             <AvatarFallback>CN</AvatarFallback>
@@ -25,12 +29,12 @@ export function AvatarDropdown() {
               user@example.com
             </div>
           </div>
-          <div className="w-4">
+          <div className="hidden w-4 sm:block">
             <ChevronDownIcon className="h-4 w-4 text-gray-500" />
           </div>
-        </button>
+        </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-32">
+      <DropdownMenuContent className="w-32" align="end">
         <DropdownMenuGroup>
           <DropdownMenuItem variant="destructive">Log out</DropdownMenuItem>
         </DropdownMenuGroup>
