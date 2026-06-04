@@ -67,7 +67,7 @@ const list2: Task[] = [
 
 export function Board() {
   return (
-    <div className="grid grid-cols-3 gap-4 px-10 mb-5">
+    <div className="flex flex-col gap-4 md:flex-row">
       {/* To Do */}
       <BoardItem title="To Do" color="#bbbdc8" tasks={list} />
 

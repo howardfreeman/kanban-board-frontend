@@ -1,15 +1,12 @@
+import { Container } from "@/shared/ui/container";
 import { Board } from "@/widgets/board";
-import { Header } from "@/widgets/header";
 import { Subheader } from "@/widgets/subheader";
 
 export default function Home() {
   return (
-    <>
-      <Header />
+    <Container>
       <Subheader />
-      <main>
-        <Board />
-      </main>
-    </>
+      <Board />
+    </Container>
   );
 }

@@ -9,7 +9,7 @@ import { SearchIcon } from "lucide-react";
 
 export function SearchInput() {
   return (
-    <InputGroup>
+    <InputGroup className="max-w-96">
       <InputGroupInput placeholder="Search tasks..." />
       <InputGroupAddon>
         <SearchIcon />
