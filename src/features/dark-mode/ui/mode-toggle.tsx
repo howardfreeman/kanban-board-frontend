@@ -9,13 +9,11 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/shared/ui/dropdown-menu";
-import { useWindowSize } from "@/shared/hooks/use-window-size";
 
 export function ModeToggle() {
   const { setTheme } = useTheme();
-  const userWidth = useWindowSize().width;
 
-  return userWidth && userWidth >= 640 ? (
+  return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="outline" size="icon">
@@ -36,7 +34,5 @@ export function ModeToggle() {
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
-  ) : (
-    <></>
   );
 }

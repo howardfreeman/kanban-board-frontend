@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import { ThemeProvider } from "./theme-provider";
+import { Header } from "@/widgets/header";
 import "./globals.css";
+import { SideMenuProvider } from "@/features/side-menu";
+import { SideMenu } from "@/widgets/side-menu";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,7 +34,13 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <SideMenuProvider>
+            <Header />
+            <div className="relative">
+              <SideMenu />
+              <main className="mb-5">{children}</main>
+            </div>
+          </SideMenuProvider>
         </ThemeProvider>
       </body>
     </html>

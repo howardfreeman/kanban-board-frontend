@@ -1,4 +1,3 @@
-import { Container } from "@/shared/ui/container";
 import { BoardItem } from "./board-item";
 import { Task } from "@/entities/task";
 
@@ -68,17 +67,15 @@ const list2: Task[] = [
 
 export function Board() {
   return (
-    <Container>
-      <div className="flex flex-col gap-4 sm:flex-row">
-        {/* To Do */}
-        <BoardItem title="To Do" color="#bbbdc8" tasks={list} />
+    <div className="flex flex-col gap-4 sm:flex-row">
+      {/* To Do */}
+      <BoardItem title="To Do" color="#bbbdc8" tasks={list} />
 
-        {/* In Progress */}
-        <BoardItem title="In Progress" color="#5397f5" tasks={list2} />
+      {/* In Progress */}
+      <BoardItem title="In Progress" color="#5397f5" tasks={list2} />
 
-        {/* Completed */}
-        <BoardItem title="Completed" color="#60bc77" tasks={[]} />
-      </div>
-    </Container>
+      {/* Completed */}
+      <BoardItem title="Completed" color="#60bc77" tasks={[]} />
+    </div>
   );
 }
