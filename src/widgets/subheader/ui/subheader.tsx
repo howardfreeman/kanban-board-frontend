@@ -7,12 +7,12 @@ import { Plus } from "lucide-react";
 
 export function Subheader() {
   return (
-    <div className="grid grid-rows-[repeat(2,min-content)] grid-cols-2 items-center gap-y-4 gap-x-5 py-4 sm:py-6 sm:gap-x-25 md:grid-cols-[1fr_2fr_100px]">
+    <div className="grid grid-rows-[repeat(2,min-content)] grid-cols-2 items-center gap-y-4 gap-x-5 py-4 sm:py-6 sm:gap-x-25 lg:grid-cols-[1fr_2fr_100px]">
       <h1 className="text-lg font-bold row-start-1 sm:text-2xl">
         Kanban Board
       </h1>
 
-      <div className="flex items-center flex-wrap gap-3 row-start-2 col-start-1 col-end-3 md:row-start-1 md:col-start-2">
+      <div className="flex items-center flex-wrap gap-3 row-start-2 col-start-1 col-end-3 lg:row-start-1 lg:col-start-2 lg:flex-nowrap">
         <BoardView />
         <Filter />
         <Priority />
